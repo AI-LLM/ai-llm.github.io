@@ -1,6 +1,6 @@
 # LLM for Software Engineering as a Wicked Problem
 
-LLM's impact on software industry is more than AI assistance. 
+LLM's impact on software industry is more than code generation. 
 This is an initiative to collaborativly construct its comprehension, methodologies and meanings.  
 
 ```mermaid
