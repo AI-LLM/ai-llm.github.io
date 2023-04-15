@@ -66,6 +66,10 @@ class TestSpaceBetweenFunction(TestCase):
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
 </details>
+    
+## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
+    
+...seems better
 
 ```mermaid
 graph TD;
