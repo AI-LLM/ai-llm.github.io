@@ -69,7 +69,7 @@ class TestSpaceBetweenFunction(TestCase):
     
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
     
-...seems better
+...seems better (becuz [GPT-J is not bad](https://minimaxir.com/2021/06/gpt-j-6b/)?)
 
 ```mermaid
 graph TD;
