@@ -66,6 +66,21 @@ class TestSpaceBetweenFunction(TestCase):
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
 </details>
+
+## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
+<details>
+<summary>example of generation:</summary>
+        
+```python
+#A Python function that adds space between each two characters of the input string:
+def addSpace(s):
+    return''.join(s)
+
+#Example use:
+print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成。
+```
+
+</details>
     
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
     
