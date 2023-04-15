@@ -56,13 +56,15 @@ class TestSpaceBetweenFunction(TestCase):
 <details>
 <summary>example of generation:</summary>
 
-
+![CodeAlpaca-1.png](CodeAlpaca-1.png)
+    
 </details>
 
 <details>
 <summary>attempt to produce some unit tests:</summary>
 
-
+![CodeAlpaca-2.png](CodeAlpaca-2.png)
+    
 </details>
 
 ```mermaid
