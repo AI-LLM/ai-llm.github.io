@@ -52,7 +52,7 @@ class TestSpaceBetweenFunction(TestCase):
     
 </details>
     
-## [code-alpaca](https://github.com/sahil280114/codealpaca) (llama 7b/13b)
+## [Code Alpaca](https://github.com/sahil280114/codealpaca) (llama 7b/13b)
 <details>
 <summary>example of generation:</summary>
 
