@@ -66,7 +66,7 @@ class TestSpaceBetweenFunction(TestCase):
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
 </details>
-
+    
 ## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
 <details>
 <summary>example of generation:</summary>
@@ -96,7 +96,26 @@ Hello World!
 ```
 
 </details>
+<details>
+<summary>attempt to produce some unit tests:</summary>
+
+```python
+generate tests in the PyTest framework for the following python function:
+def space_between(string):
+    return ' '.join([x for x in string])
+
+Use the following test generator template in your test script:
+from unittest.mock import patch
+import pytest
+def space_between_test_case(mocker):
+space_between_calls = [‘A’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
+space_between_truth = ['A ', ‘b’,‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
+mocker.patch.object(space_between, ‘fn’, MagicMock(side_effect=space_between_truth))
+assert space_between('Abc def ghi jkl mno
+```
     
+</details>
+        
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
     
 ...seems better (becuz [GPT-J is not bad](https://minimaxir.com/2021/06/gpt-j-6b/)?)
