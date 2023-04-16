@@ -87,6 +87,10 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 <summary>example of generation:</summary>
 
 ```python
+PROMPT:
+# A Python function that adds space between each two characters of the input string:    
+
+ANSWER:
 def space_char(text):
 return " ".join(text.split())
 #Call the function and pass it a string:
@@ -100,10 +104,12 @@ Hello World!
 <summary>attempt to produce some unit tests:</summary>
 
 ```python
+PROMPT:
 generate tests in the PyTest framework for the following python function:
 def space_between(string):
     return ' '.join([x for x in string])
 
+ANSWER:
 Use the following test generator template in your test script:
 from unittest.mock import patch
 import pytest
