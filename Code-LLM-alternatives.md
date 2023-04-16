@@ -130,9 +130,9 @@ assert space_between('Abc def ghi jkl mno
     
 </details>
         
-## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
+## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) ([GPT-J 6.7B](https://minimaxir.com/2021/06/gpt-j-6b/))
     
-...seems better (becuz [GPT-J is not bad](https://minimaxir.com/2021/06/gpt-j-6b/)?)
+...seems better
     
 ## AWS CodeWhisperer
 <details>
