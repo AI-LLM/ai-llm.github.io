@@ -2,7 +2,7 @@
 
 ## [Llama 7B](https://www.reddit.com/r/Oobabooga/comments/11l5zlt/llama_code_generation/)
 <details>
-<summary>example of generation:</summary>
+<summary>example of generation: :x:</summary>
     
 ```python
 # A Python function that adds space between each two characters of the input string:     <- this line was the prompt
@@ -54,14 +54,14 @@ class TestSpaceBetweenFunction(TestCase):
     
 ## [Code Alpaca](https://github.com/sahil280114/codealpaca) (llama 7b/13b)
 <details>
-<summary>example of generation:</summary>
+<summary>example of generation: :x:</summary>
 
 ![CodeAlpaca-1.png](CodeAlpaca-1.png)
     
 </details>
 
 <details>
-<summary>attempt to produce some unit tests:</summary>
+<summary>attempt to produce some unit tests: :x:</summary>
 
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
@@ -69,7 +69,7 @@ class TestSpaceBetweenFunction(TestCase):
     
 ## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
 <details>
-<summary>example of generation:</summary>
+<summary>example of generation: :x:</summary>
         
 ```python
 #A Python function that adds space between each two characters of the input string:
@@ -133,7 +133,7 @@ assert space_between('Abc def ghi jkl mno
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) ([GPT-J 6.7B](https://minimaxir.com/2021/06/gpt-j-6b/))
     
 <details>
-<summary>example of generation:</summary>
+<summary>example of generation: :x:</summary>
 
 PROMPT:
 
@@ -160,7 +160,7 @@ For example:
 ```    
 </details>
 <details>
-<summary>attempt to produce some unit tests:</summary>
+<summary>attempt to produce some unit tests: :x:</summary>
 
 PROMPT:
 
