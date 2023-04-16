@@ -1,4 +1,4 @@
-# 大语言模型的代码生成能力调研
+# Comparing code generation of LLMs
 
 ## [Llama 7B](https://www.reddit.com/r/Oobabooga/comments/11l5zlt/llama_code_generation/)
 <details>
