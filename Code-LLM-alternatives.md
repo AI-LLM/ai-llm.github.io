@@ -86,11 +86,14 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 <details>
 <summary>example of generation:</summary>
 
-```python
 PROMPT:
-# A Python function that adds space between each two characters of the input string:    
 
+```python
+# A Python function that adds space between each two characters of the input string:    
+```
+    
 ANSWER:
+```python    
 def space_char(text):
 return " ".join(text.split())
 #Call the function and pass it a string:
@@ -103,13 +106,17 @@ Hello World!
 <details>
 <summary>attempt to produce some unit tests:</summary>
 
-```python
 PROMPT:
 generate tests in the PyTest framework for the following python function:
+
+```python
 def space_between(string):
     return ' '.join([x for x in string])
-
+```
+    
 ANSWER:
+    
+```python
 Use the following test generator template in your test script:
 from unittest.mock import patch
 import pytest
@@ -125,7 +132,25 @@ assert space_between('Abc def ghi jkl mno
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
     
 ...seems better (becuz [GPT-J is not bad](https://minimaxir.com/2021/06/gpt-j-6b/)?)
+    
+## AWS CodeWhisperer
+<details>
+<summary>code and test generation:</summary>
+PROMPT in comments    
 
+```python
+# A Python function that adds space between each two characters of the input string:
+def add_space(string):
+    return " ".join(string)
+
+# tests in the PyTest framework for add_space function
+def test_add_space():
+    assert (add_space('hello') == 'h e l l o')
+    assert (add_space('hello world') == 'h e l l o w o r l d')
+```    
+    
+</details>
+    
 ```mermaid
 graph TD;
     Start-->Q1{需要生成比较复杂的代码?};
