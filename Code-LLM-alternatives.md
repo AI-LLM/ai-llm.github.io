@@ -127,6 +127,33 @@ space_between_truth = ['A ', ‘b’,‘c’, ‘d’, ‘e’, ‘f’, ‘g’
 mocker.patch.object(space_between, ‘fn’, MagicMock(side_effect=space_between_truth))
 assert space_between('Abc def ghi jkl mno
 ```
+
+Run 2 at [replicate](https://replicate.com/complete/github/?code=f1bfa55c55074d69a540&state=x4bRPsncKKuMBsdKXrrUU2NSgsahEn1m)
+
+PROMPT:
+
+```python    
+def space_between(string):
+    return ' '.join([x for x in string])
+
+tests in the PyTest framework for the above python function:
+```
+
+Output
+
+```python
+space_between('foo bar')
+'t foo bar'
+
+space_between('foo     bar   ')
+'foo     bar   '
+
+space_between('foo\tbar')
+'foobar'
+
+space_between('  foo  bar  ')
+'  foo  bar'
+```
     
 </details>
         
