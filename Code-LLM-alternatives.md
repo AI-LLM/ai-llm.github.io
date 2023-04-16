@@ -107,6 +107,7 @@ Hello World!
 <summary>attempt to produce some unit tests:</summary>
 
 PROMPT:
+
 generate tests in the PyTest framework for the following python function:
 
 ```python
@@ -171,6 +172,117 @@ def test_add_space():
     assert add_space('abcde') == 'a b c d e'
     assert add_space('abcdef') == 'a b c d e f'
 ```    
+    
+</details>
+
+## GPT-3.5
+<details>
+<summary>code generation:</summary>
+PROMPT:
+    
+A Python function that adds space between each two characters of the input string:     
+    
+ANSWER:
+
+Here's an example Python function that adds a space between each two characters of a given input string:
+    
+```python
+def add_space(input_string):
+    """Adds a space between each two characters of the input string."""
+    return ' '.join(input_string[i:i+2] for i in range(0, len(input_string), 2))
+```    
+
+[...](gpt-3-5-python-1,2.html)
+    
+</details>
+
+<details>
+<summary>test generation:</summary>
+PROMPT:
+    
+tests in the PyTest framework for add_space function
+    
+ANSWER:
+
+Sure, here's an example test code for the add_space function using the PyTest framework:
+    
+```python
+def test_add_space():
+    assert add_space('hello') == 'h e l l o'
+    assert add_space('Python') == 'P y t h o n'
+    assert add_space('12345') == '1 2 3 4 5'
+    assert add_space('') == ''
+    assert add_space('a') == 'a'
+    assert add_space('ab') == 'a b'
+    assert add_space('abc') == 'a b c'
+```    
+
+[...](gpt-3-5-python-1,2.html)
+    
+</details>
+
+## GPT-4
+<details>
+<summary>code generation:</summary>
+PROMPT:
+    
+A Python function that adds space between each two characters of the input string:
+    
+ANSWER:
+
+Here's a Python function that takes an input string and returns a new string with a space inserted between each pair of characters:
+    
+```python
+def add_space_between_chars(input_string):
+    output_string = ""
+    for i in range(len(input_string)):
+        output_string += input_string[i]
+        if i < len(input_string) - 1:
+            output_string += " "
+    return output_string
+
+# Example usage:
+input_string = "hello"
+result = add_space_between_chars(input_string)
+print(result)  # Output: "h e l l o"
+```    
+
+[...](gpt-4-python-1,2.html)
+    
+</details>
+
+<details>
+<summary>test generation:</summary>
+PROMPT:
+    
+tests in the PyTest framework for above function
+    
+ANSWER:
+
+Here's an example of how to write tests for the add_space_between_chars function using the PyTest framework:
+
+First, create a new file named test_add_space_between_chars.py in your project directory.
+
+Next, add the following contents to the file:
+    
+```python
+import pytest
+from your_module import add_space_between_chars
+
+@pytest.mark.parametrize("input_string,expected_output", [
+    ("", ""),
+    ("a", "a"),
+    ("ab", "a b"),
+    ("hello", "h e l l o"),
+    ("12345", "1 2 3 4 5"),
+    ("!@#$%", "! @ # $ %")
+])
+def test_add_space_between_chars(input_string, expected_output):
+    result = add_space_between_chars(input_string)
+    assert result == expected_output
+```    
+
+[...](gpt-4-python-1,2.html)
     
 </details>
     
