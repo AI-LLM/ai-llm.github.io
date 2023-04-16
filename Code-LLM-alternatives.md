@@ -132,7 +132,67 @@ assert space_between('Abc def ghi jkl mno
         
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) ([GPT-J 6.7B](https://minimaxir.com/2021/06/gpt-j-6b/))
     
-...seems better
+<details>
+<summary>example of generation:</summary>
+
+PROMPT:
+
+A Python function that adds space between each two characters of the input string: 
+    
+ANSWER:
+
+Here is a Python function that adds a space character between every two characters in a string:
+
+```python
+def add_spaces(string):
+    return ''.join(map(lambda x: ' ' + x, string))
+```
+
+The function takes a string as input and returns a new string with spaces added between each character in the input string.
+
+For example:
+
+```python
+>>> add_spaces('hello world')
+'hello  world'
+>>> add_spaces('this is a test')
+'this is a test'
+```    
+</details>
+<details>
+<summary>attempt to produce some unit tests:</summary>
+
+PROMPT:
+
+generate tests in the PyTest framework for the python function:
+
+```python
+def space_between(string):
+    return ' '.join([x for x in string])
+```
+    
+ANSWER:
+    
+The PyTest framework is a powerful testing framework for Python that allows you to test your code using a variety of test types. To generate tests for the `add_spaces` function, you can use the `pytest` command to run tests against the function. Here's an example of how you could use `pytest` to test the function:
+
+```
+python -m pytest test.py
+```
+
+This command will run the tests defined in the `test.py` file. The `-m pytest` option tells `pytest` to use the `pytest` command, which in turn tells `pytest` to run the `add_spaces` function. To generate tests for the `space_between` function, you can use the `pytest` command:
+
+```
+python -m pytest test.py
+```
+
+This command will run the tests defined in the `test.py` file. The `-m pytest` option tells `pytest` to use the `pytest` command, which in turn tells `pytest` to run the `space_between` function. You can then generate tests for this function by running the `pytest` command:
+
+```
+python -m pytest test.py
+```
+
+This command will run the tests defined in the `test.py` file. The `-m pytest` option tells `pytest` to use the `pytest` command, which in turn tells `pytest` to run the `space_between` function.    
+</details>
     
 ## AWS CodeWhisperer
 <details>
