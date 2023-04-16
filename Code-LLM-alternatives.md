@@ -82,6 +82,21 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 
 </details>
     
+## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
+<details>
+<summary>example of generation:</summary>
+
+```python
+def space_char(text):
+return " ".join(text.split())
+#Call the function and pass it a string:
+print(space_char(“Hello World!”))
+#OUTPUT:
+Hello World!    
+```
+
+</details>
+    
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) (GPT-J 6.7B)
     
 ...seems better (becuz [GPT-J is not bad](https://minimaxir.com/2021/06/gpt-j-6b/)?)
