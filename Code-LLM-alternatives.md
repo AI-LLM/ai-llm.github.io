@@ -150,6 +150,29 @@ def test_add_space():
 ```    
     
 </details>
+
+## GitHub Copilot
+<details>
+<summary>code and test generation:</summary>
+PROMPT in comments    
+
+```python
+# A Python function that adds space between each two characters of the input string:
+def add_space(s):
+    return ' '.join(s)
+
+# tests in the PyTest framework for add_space function
+def test_add_space():
+    assert add_space('') == ''
+    assert add_space('a') == 'a'
+    assert add_space('ab') == 'a b'
+    assert add_space('abc') == 'a b c'
+    assert add_space('abcd') == 'a b c d'
+    assert add_space('abcde') == 'a b c d e'
+    assert add_space('abcdef') == 'a b c d e f'
+```    
+    
+</details>
     
 ```mermaid
 graph TD;
