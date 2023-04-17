@@ -9,7 +9,7 @@ write a python program with LlamaIndex interface to implement semantic search on
 
 </details>
 
-[GPT-4 “hallucinates”](doc-code/semantic-search-with-llamaindex.html) on [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/index.html) which started from 2022 after the models were trained.
+[GPT-4 “hallucinates”](//ai-llm.github.io/doc-code/semantic-search-with-llamaindex.html) on [LlamaIndex](https://gpt-index.readthedocs.io/en/latest/index.html) which started from 2022 after the models were trained.
 
 ## With documentation
 
@@ -38,7 +38,7 @@ You should get back a response similar to the following: The author wrote short 
 According to above LlamaIndex documentation，write a python program with LlamaIndex interface to implement semantic search on the documents at https://gpt-index.readthedocs.io/en/latest/index.html
 </details>
 
-Both [GPT-3.5](doc-code/doc-code-llamaindex-3-5.html) and [GPT-4](doc-code/doc-code-llamaindex-4.html) learn.
+Both [GPT-3.5](//ai-llm.github.io/doc-code/doc-code-llamaindex-3-5.html) and [GPT-4](//ai-llm.github.io/doc-code/doc-code-llamaindex-4.html) learn.
 
 ## With more documentation
 
@@ -128,4 +128,4 @@ node2.relationships[DocumentRelationship.PREVIOUS] = node1.get_doc_id()
 According to above LlamaIndex documentation，write a python program with LlamaIndex interface to implement semantic search on the web page and its linked pages at https://gpt-index.readthedocs.io/en/latest/index.html
 </details>
 
-[GPT-4](doc-code/doc-code-llamaindex-2-4.html) utilizes more knowledge (e.g. BeautifulSoup) and learns more (construct documents manually) than [GPT-3.5](doc-code/doc-code-llamaindex-2-3-5.html).
+[GPT-4](//ai-llm.github.io/doc-code/doc-code-llamaindex-2-4.html) utilizes more knowledge (e.g. BeautifulSoup) and learns more (construct documents manually) than [GPT-3.5](//ai-llm.github.io/doc-code/doc-code-llamaindex-2-3-5.html).
