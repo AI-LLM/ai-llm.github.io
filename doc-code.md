@@ -62,6 +62,7 @@ print(response)
 You should get back a response similar to the following: The author wrote short stories and tried to program on an IBM 1401.
 
 ===
+	
 Data Connectors (LlamaHub 🦙)
 Our data connectors are offered through LlamaHub 🦙. LlamaHub is an open-source repository containing data loaders that you can easily plug and play into any LlamaIndex application.
 
@@ -73,6 +74,7 @@ Slack (SlackReader)
 Discord (DiscordReader)
 
 ===
+	
 LlamaIndex Usage Pattern
 The general usage pattern of LlamaIndex is as follows:
 Load in documents (either manually, or through a data loader)
@@ -125,6 +127,7 @@ node1.relationships[DocumentRelationship.NEXT] = node2.get_doc_id()
 node2.relationships[DocumentRelationship.PREVIOUS] = node1.get_doc_id()
 ```
 ===
+	
 According to above LlamaIndex documentation，write a python program with LlamaIndex interface to implement semantic search on the web page and its linked pages at https://gpt-index.readthedocs.io/en/latest/index.html
 </details>
 
