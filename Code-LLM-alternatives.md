@@ -419,6 +419,6 @@ def test_add_space_between_chars(input_string, expected_output):
 graph TD;
     S[select]-->Q1{more than a simple function/method?};
     Q1 -- Yes -->P1[GPT-3.5,4];
-    Q1 -- No -->P2[other models];
+    Q1 -- No -->P2[other models may work too];
     P2 --> Q2{Specific API/Library/Framework used?}
 ```
