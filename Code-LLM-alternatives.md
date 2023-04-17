@@ -422,6 +422,6 @@ graph TD;
     Q1 -- Yes -->P1[GPT-3.5,4];
     Q1 -- No -->P2[other models may work too];
     Q2 -- Yes -->P1[GPT-3.5,4];
-    Q2 -- No -->P3(other models far from working);
+    Q2 -- No -->P2;
     P2 --> Q11{Specific API/Library/Framework used?}
 ```
