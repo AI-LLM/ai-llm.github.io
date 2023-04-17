@@ -221,7 +221,8 @@ python -m pytest test.py
 This command will run the tests defined in the `test.py` file. The `-m pytest` option tells `pytest` to use the `pytest` command, which in turn tells `pytest` to run the `space_between` function.    
 </details>
     
-## AWS CodeWhisperer
+## AWS CodeWhisperer 
+(smarter in coding for AWS, otherwise similar to Copilot)
 <details>
 <summary>code and test generation:</summary>
 PROMPT in comments    
