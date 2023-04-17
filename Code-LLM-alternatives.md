@@ -145,6 +145,47 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 ```
 
 </details>
+
+## [Llama 30B](https://open-assistant.io/) (oasst-sft-6-llama-30b)
+<details>
+<summary>example of generation: :yellow_circle:</summary>
+
+PROMPT:
+
+```
+A Python function that adds space between each two characters of the input string:    
+```    
+    
+ANSWER:
+```python    
+def add_space(string):
+return ' '.join(string)
+```
+
+</details>
+<details>
+<summary>attempt to produce some unit tests: 🔴</summary>
+
+PROMPT:
+
+```
+def add_space(string):
+  return ' '.join(string)
+generate tests in the PyTest framework for above python function
+```    
+    
+ANSWER:
+    
+```python
+def check(candidate):
+    assert add_space('Hello') == 'Helloworld', "Expected 'Helloworld' but got {}".format(candidate())
+    assert add_space("Hi") == "Hiworld", "Expected 'Hiworld' but got {}".format(candidate())
+    assert add_space("World!") == "Worl d!", "Expected 'Worl d!' but got {}".format(candidate())
+
+check(add_space)
+```
+    
+</details>
     
 ## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
 <details>
