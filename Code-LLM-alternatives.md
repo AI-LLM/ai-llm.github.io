@@ -417,8 +417,11 @@ def test_add_space_between_chars(input_string, expected_output):
     
 ```mermaid
 graph TD;
-    S[select]-->Q1{more than a simple function/method?};
+    S[select]-->Q1{more than a simple function/method to generate?};
+    S[select]-->Q2{code to understand?};
     Q1 -- Yes -->P1[GPT-3.5,4];
     Q1 -- No -->P2[other models may work too];
-    P2 --> Q2{Specific API/Library/Framework used?}
+    Q2 -- Yes -->P1[GPT-3.5,4];
+    Q2 -- No -->P3(other models far from working);
+    P2 --> Q11{Specific API/Library/Framework used?}
 ```
