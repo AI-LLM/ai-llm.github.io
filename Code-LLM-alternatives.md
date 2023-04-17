@@ -2,7 +2,7 @@
 
 ## [Llama 7B](https://www.reddit.com/r/Oobabooga/comments/11l5zlt/llama_code_generation/)
 <details>
-<summary>example of generation: :x:</summary>
+<summary>example of generation: :red_circle:</summary>
     
 ```python
 # A Python function that adds space between each two characters of the input string:     <- this line was the prompt
@@ -21,7 +21,7 @@
 </details>
 
 <details>
-<summary>attempt to produce some unit tests:</summary>
+<summary>attempt to produce some unit tests: :yellow_circle:</summary>
 
 ```python
 # A Python function that adds space between each two characters of the input string:
@@ -54,14 +54,14 @@ class TestSpaceBetweenFunction(TestCase):
     
 ## [Code Alpaca](https://github.com/sahil280114/codealpaca) (llama 7b/13b)
 <details>
-<summary>example of generation: :x:</summary>
+<summary>example of generation: :red_circle:</summary>
 
 ![CodeAlpaca-1.png](CodeAlpaca-1.png)
     
 </details>
 
 <details>
-<summary>attempt to produce some unit tests: :x:</summary>
+<summary>attempt to produce some unit tests: :red_circle:</summary>
 
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
@@ -69,7 +69,7 @@ class TestSpaceBetweenFunction(TestCase):
     
 ## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
 <details>
-<summary>example of generation: :x:</summary>
+<summary>example of generation: :red_circle: (unable to handle space?)</summary>
         
 ```python
 #A Python function that adds space between each two characters of the input string:
@@ -84,7 +84,7 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
     
 ## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
 <details>
-<summary>example of generation:</summary>
+<summary>example of generation: :yellow_circle:</summary>
 
 PROMPT:
 
@@ -160,7 +160,7 @@ space_between('  foo  bar  ')
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) ([GPT-J 6.7B](https://minimaxir.com/2021/06/gpt-j-6b/))
     
 <details>
-<summary>example of generation: :x:</summary>
+<summary>example of generation: :red_circle:</summary>
 
 PROMPT:
 
@@ -187,7 +187,7 @@ For example:
 ```    
 </details>
 <details>
-<summary>attempt to produce some unit tests: :x:</summary>
+<summary>attempt to produce some unit tests: :red_circle:</summary>
 
 PROMPT:
 
@@ -224,7 +224,7 @@ This command will run the tests defined in the `test.py` file. The `-m pytest` o
 ## AWS CodeWhisperer 
 (smarter in coding for AWS, otherwise similar to Copilot)
 <details>
-<summary>code and test generation:</summary>
+<summary>code and test generation: :yellow_circle:</summary>
 PROMPT in comments    
 
 ```python
@@ -242,7 +242,7 @@ def test_add_space():
 
 ## GitHub Copilot
 <details>
-<summary>code and test generation:</summary>
+<summary>code and test generation: :yellow_circle:</summary>
 PROMPT in comments    
 
 ```python
@@ -265,7 +265,7 @@ def test_add_space():
 
 ## GPT-3.5
 <details>
-<summary>code generation:</summary>
+<summary>code generation: :green_circle:</summary>
 PROMPT:
     
 A Python function that adds space between each two characters of the input string:     
@@ -285,7 +285,7 @@ def add_space(input_string):
 </details>
 
 <details>
-<summary>test generation:</summary>
+<summary>test generation: :red_circle:</summary>
 PROMPT:
     
 tests in the PyTest framework for add_space function
@@ -311,7 +311,7 @@ def test_add_space():
 
 ## GPT-4
 <details>
-<summary>code generation:</summary>
+<summary>code generation: :yellow_circle:</summary>
 PROMPT:
     
 A Python function that adds space between each two characters of the input string:
