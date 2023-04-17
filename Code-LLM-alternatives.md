@@ -146,7 +146,7 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 
 </details>
 
-## [Llama 30B](https://open-assistant.io/) (oasst-sft-6-llama-30b)
+## [Open-Assistant](https://open-assistant.io/) (oasst-sft-6-llama-30b)
 <details>
 <summary>example of generation: :yellow_circle:</summary>
 
