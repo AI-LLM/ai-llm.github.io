@@ -66,6 +66,8 @@ class TestSpaceBetweenFunction(TestCase):
 ![CodeAlpaca-2.png](CodeAlpaca-2.png)
     
 </details>
+    
+## [Chinese LLaMA Alpaca 7B/13B](https://github.com/ymcui/Chinese-LLaMA-Alpaca)
 
 ## [GPT4ALL-J](https://github.com/nomic-ai/gpt4all) ([GPT-J 6.7B](https://minimaxir.com/2021/06/gpt-j-6b/))
     
