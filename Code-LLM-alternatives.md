@@ -264,7 +264,7 @@ space_between('  foo  bar  ')
     
 </details>
             
-## AWS CodeWhisperer 
+## AWS CodeWhisperer (?)
 (smarter in coding for AWS, otherwise similar to Copilot)
 <details>
 <summary>code and test generation: :yellow_circle:</summary>
@@ -283,7 +283,7 @@ def test_add_space():
     
 </details>
 
-## GitHub Copilot
+## GitHub Copilot (Codex)
 <details>
 <summary>code and test generation: :yellow_circle:</summary>
 PROMPT in comments    
@@ -424,7 +424,7 @@ graph TD;
     Q1 -- Yes --> Q1a{has a model defined in higher level of abstraction?}
     Q1a -- No --> P1[GPT-3.5,4];
     Q1a -- Yes --> P21
-    Q1 -- No -->P2[other models may work too];
+    Q1 -- No -->P2[other LMs may work too];
     Q2 -- Yes -->P1[GPT-3.5,4];
     Q2 -- No -->P2;
     P1 --> Q3{Specific API/Library/Framework used?};
