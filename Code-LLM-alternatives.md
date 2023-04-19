@@ -520,7 +520,7 @@ def add_space(input_string):
 </details>
 
 <details>
-<summary>test generation: :red_circle:</summary>
+<summary>test generation: :yellow_circle:</summary>
 PROMPT:
     
 tests in the PyTest framework for add_space function
