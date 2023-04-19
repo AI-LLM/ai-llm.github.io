@@ -616,7 +616,7 @@ graph TD;
     Q1 -- Yes --> Q1a{"Have a model defined in \nhigher level of abstraction?"}
     Q1a -- No --> P1["GPT-3.5,4\nClaude"];
     Q1a -- Yes --> Q1b{To be deterministic?} 
-    Q1b -- No --> P12["NN(LSTM) for \nModel Transformations"]
+    Q1b -- No --> P12["NN(<a target='_blank' href='https://modeling-languages.com/lstm-neural-network-model-transformations/'>LSTM</a>) for \nModel Transformations"]
     Q1b -- Yes --> P21
     Q1 -- No -->P2[Other LMs may work too];
     Q2 -- Yes -->P1
