@@ -1,6 +1,6 @@
 # Comparing code generation of LLMs
 
-## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) (clone of [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) 1.1B) 
+## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) ([clone](https://github.com/bigcode-project/Megatron-LM) of [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) 1.1B) 
 <details>
 <summary>example of generation: :yellow_circle:</summary>
 
