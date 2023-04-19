@@ -1,5 +1,82 @@
 # Comparing code generation of LLMs
 
+## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) (clone of [Megatron-LM](https://github.com/NVIDIA/Megatron-LM) 1.1B) 
+<details>
+<summary>example of generation: :yellow_circle:</summary>
+
+PROMPT:
+```
+# A Python function that adds space between each two characters of the input string:
+<FILL-HERE>    
+
+Number of tokens to generate: 512
+Temperature: 0.2
+Random seed to use for the generation: 0
+```
+
+RESULT:
+```python
+# A Python function that adds space between each two characters of the input string:
+def add_space(string):
+    return " ".join(string)
+
+# A Python function that removes all the spaces from the input string:
+def remove_space(string):
+    return string.replace(" ", "")
+
+# A Python function that returns the length of the input string:
+def length(string):
+    return len(string)
+
+# A Python function that returns the first character of the input string:
+def first_char(string):
+    return string[0]
+
+# A Python function that returns the last character of the input string:
+def last_char(string):
+    return string[-1]
+
+# A Python function that returns the middle character of the input string:
+def middle_char(string):
+    return string[len(string)//2]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_2(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_3(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_4(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_5(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_6(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two characters of the input string:
+def substr_between_7(string, start, end):
+    return string[start:end]
+
+# A Python function that returns the substring between the two character
+```    
+    
+</details>
+
 ## [Llama 7B](https://www.reddit.com/r/Oobabooga/comments/11l5zlt/llama_code_generation/)
 <details>
 <summary>example of generation: :red_circle:</summary>
