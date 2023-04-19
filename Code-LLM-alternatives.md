@@ -621,7 +621,7 @@ graph TD;
     Q1 -- No -->P2[Other LMs may work too];
     Q2 -- Yes -->P1[GPT-3.5,4];
     Q2 -- No -->P2;
-    P1 --> Q3{"Specific \nAPI/Library/Framework used?"};
+    P1 --> Q3{"Special \nAPI/Library/Framework used?"};
     Q3 -- No -->P10[Prompt engineering];
     Q3 -- Yes -->P11["Retrieval (embedding) + \nPrompt engineering"];
     P2 --> Q4{On-premise required?};
