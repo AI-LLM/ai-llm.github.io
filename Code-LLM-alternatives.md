@@ -611,7 +611,7 @@ def test_add_space_between_chars(input_string, expected_output):
     
 ```mermaid
 graph TD;
-    S((Code Generation))-->Q1{"More than a simple \nfunction/method to generate?"};
+    S((Requirement))-->Q1{"More than a simple \nfunction/method to generate?"};
     S-->Q2{Code to understand?};
     Q1 -- Yes --> Q1a{"Have a model defined in \nhigher level of abstraction?"}
     Q1a -- No --> P1["GPT-3.5,4\nClaude"];
@@ -631,4 +631,10 @@ graph TD;
     Q4 -- No --> P23["GitHub Copilot, \nAWS CodeWhisperer alike"]
     Q5 -- Yes --> P21["Templates and rule based generator \ngenerated with GPT-4, MTBE, etc."]
     Q5 -- No --> P22[Fine-tune LMs < 100B]
+    P10 --> Code{{Code}}
+    P11 --> Code
+    P12 --> Code
+    P21 --> Code
+    P22 --> Code
+    P23 --> Code
 ```
