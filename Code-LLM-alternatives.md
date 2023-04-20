@@ -1,4 +1,4 @@
-# Comparing code generation of LLMs
+# A curated list of awesome LLMs for code generation
 
 ## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) ([GPT-2](https://huggingface.co/bigcode/santacoder-megatron) 1.1B with [Megatron-LM](https://github.com/NVIDIA/Megatron-LM)) 
 <details>
