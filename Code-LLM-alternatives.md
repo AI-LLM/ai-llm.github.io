@@ -209,6 +209,120 @@ python -m pytest test.py
 
 This command will run the tests defined in the `test.py` file. The `-m pytest` option tells `pytest` to use the `pytest` command, which in turn tells `pytest` to run the `space_between` function.    
 </details>
+
+## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
+<details>
+<summary>example of generation: :yellow_circle:</summary>
+
+PROMPT:
+
+```python
+# A Python function that adds space between each two characters of the input string:    
+```
+    
+ANSWER:
+```python    
+def space_char(text):
+return " ".join(text.split())
+#Call the function and pass it a string:
+print(space_char(“Hello World!”))
+#OUTPUT:
+Hello World!    
+```
+
+</details>
+<details>
+<summary>attempt to produce some unit tests:</summary>
+
+PROMPT:
+
+generate tests in the PyTest framework for the following python function:
+
+```python
+def space_between(string):
+    return ' '.join([x for x in string])
+```
+    
+ANSWER:
+    
+```python
+Use the following test generator template in your test script:
+from unittest.mock import patch
+import pytest
+def space_between_test_case(mocker):
+space_between_calls = [‘A’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
+space_between_truth = ['A ', ‘b’,‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
+mocker.patch.object(space_between, ‘fn’, MagicMock(side_effect=space_between_truth))
+assert space_between('Abc def ghi jkl mno
+```
+
+Run 2 at [replicate](https://replicate.com/complete/github/?code=f1bfa55c55074d69a540&state=x4bRPsncKKuMBsdKXrrUU2NSgsahEn1m)
+
+PROMPT:
+
+```python    
+def space_between(string):
+    return ' '.join([x for x in string])
+
+tests in the PyTest framework for the above python function:
+```
+
+Output
+
+```python
+space_between('foo bar')
+'t foo bar'
+
+space_between('foo     bar   ')
+'foo     bar   '
+
+space_between('foo\tbar')
+'foobar'
+
+space_between('  foo  bar  ')
+'  foo  bar'
+```
+    
+</details>
+
+<details>	
+<summary>prompting in higher level of abstraction: :red_circle: it has not the specific knowledge (mxGraph), doesn't conduct "match"</summary>
+
+PROMPT:
+
+The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the "lang" key.
+		
+ANSWER:
+	
+Below is the function that you are looking for:
+```JavaScript	
+function(urlParams){
+var keys = [
+‘backgroundAlpha’,
+‘color’,
+‘fill’,
+‘stroke’,
+‘strokeWidth’
+],
+matches = [];
+keys.forEach(function(key){
+    if(key in urlParams && urlParams[key]!== '') {
+        matches.push(key + '=' + urlParams[key]);
+    }
+});
+
+return matches;
+}
+```	
+You can copy and paste this code into your browser’s console to test it.
+	
+References:
+	
+UrlParams interface
+	
+mxCells API	
+	
+</details>            
     
 ## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
 <details>
@@ -452,82 +566,7 @@ function searchForCells(graph, urlParams) {
 ```
 
 </details>
-    
-## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
-<details>
-<summary>example of generation: :yellow_circle:</summary>
-
-PROMPT:
-
-```python
-# A Python function that adds space between each two characters of the input string:    
-```
-    
-ANSWER:
-```python    
-def space_char(text):
-return " ".join(text.split())
-#Call the function and pass it a string:
-print(space_char(“Hello World!”))
-#OUTPUT:
-Hello World!    
-```
-
-</details>
-<details>
-<summary>attempt to produce some unit tests:</summary>
-
-PROMPT:
-
-generate tests in the PyTest framework for the following python function:
-
-```python
-def space_between(string):
-    return ' '.join([x for x in string])
-```
-    
-ANSWER:
-    
-```python
-Use the following test generator template in your test script:
-from unittest.mock import patch
-import pytest
-def space_between_test_case(mocker):
-space_between_calls = [‘A’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
-space_between_truth = ['A ', ‘b’,‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’, ‘i’, ‘j’, ‘k’, ‘l’,‘m’, ‘n’, ‘o’, ‘p’, ‘q’, ‘r’,‘s’, ‘t’, ‘u’, ‘v’, ‘w’, ‘x’, ‘y’, ‘z’]
-mocker.patch.object(space_between, ‘fn’, MagicMock(side_effect=space_between_truth))
-assert space_between('Abc def ghi jkl mno
-```
-
-Run 2 at [replicate](https://replicate.com/complete/github/?code=f1bfa55c55074d69a540&state=x4bRPsncKKuMBsdKXrrUU2NSgsahEn1m)
-
-PROMPT:
-
-```python    
-def space_between(string):
-    return ' '.join([x for x in string])
-
-tests in the PyTest framework for the above python function:
-```
-
-Output
-
-```python
-space_between('foo bar')
-'t foo bar'
-
-space_between('foo     bar   ')
-'foo     bar   '
-
-space_between('foo\tbar')
-'foobar'
-
-space_between('  foo  bar  ')
-'  foo  bar'
-```
-    
-</details>
-            
+    	
 ## AWS CodeWhisperer (?)
 (smarter in coding for AWS, otherwise similar to Copilot)
 <details>
