@@ -324,7 +324,7 @@ mxCells API
 	
 </details>            
     
-## [CodeGeex](https://codegeex.cn/zh-CN/playground) (ChatGLM 13B)
+## [CodeGeex](https://codegeex.cn/zh-CN/playground) (13B)
 <details>
 <summary>example of generation: :red_circle: (unable to handle space?)</summary>
         
