@@ -224,6 +224,95 @@ print addSpace("hello")# 代码生成完毕，修改此注释后可继续生成�
 ```
 
 </details>
+<details>
+<summary>prompting in higher level of abstraction: :yellow_circle: it has the specific knowledge (mxGraph) but does not conduct "match" well</summary>
+        
+```JavaScript
+// The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
+var graph = new mxGraph(document.getElementById('container'));
+
+var lang = 'de';
+
+function main(lang)
+{
+	var urlParams = new URLSearchParams(window.location.search);
+	lang = urlParams.get('lang');
+	
+	if (lang!= null)
+	{
+		lang = lang.toLowerCase();
+		
+		if (lang.substr(0,2)!='en' && lang.substr(0,2)!='de')
+		{
+			lang = 'de';
+		}
+	}
+	
+	document.getElementById('lang').value = lang;
+	
+	graph.getModel().beginUpdate();
+	try
+	{
+		var cells = graph.getModel().getCells(graph.getChildCells(graph.getModel().getRoot()));
+		var values = new Object();
+		var key = '';
+		var value = '';
+		var i = 0;
+		
+		for (var j = 0; j < cells.length; j++)
+		{
+			key = cells[j].getAttribute('key');
+			value = cells[j].getAttribute('value');
+			
+			if (lang.substr(0,2)!='en' && lang.substr(0,2)!='de')
+			{
+				if (key!='lang' && key!='lang_not' && key!='lang_and' && key!='lang_or')
+				{
+					if (values[key] == null)
+					{
+						values[key] = [];
+					}
+					values[key][i] = value;
+				}
+			}
+			else
+			{
+				if (key!='lang' && key!='lang_not' && key!='lang_and' && key!='lang_or')
+				{
+					if (values[key] == null)
+					{
+						values[key] = '';
+					}
+					values[key][i] = value;
+				}
+			}
+			
+			i++;
+		}
+		
+		if (lang.substr(0,2)!='en' && lang.substr(0,2)!='de')
+		{
+			if (values['lang']!= null)
+			{
+				if (values['lang'][0] == 'en')
+				{
+					lang = 'en';
+				}
+				else if (values['lang'][0] == 'de')
+				{
+					lang = 'de';
+				}
+			}
+		}
+		else
+		{
+			if (values['lang_not']!= null)
+			{
+				if (values['lang_not'][0] == 'en')
+(can be continued...)
+```
+
+</details>
 
 ## [Open-Assistant](https://open-assistant.io/) (oasst-sft-6-llama-30b)
 <details>
