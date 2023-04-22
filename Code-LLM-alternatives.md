@@ -400,6 +400,58 @@ check(add_space)
 ```
     
 </details>
+
+<details>
+<summary>prompting in higher level of abstraction: :yellow_circle: it has not the specific knowledge (mxGraph) but conduct "match" well</summary>
+
+PROMPT:
+
+The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the "lang" key.
+	
+ANSWER:
+```JavaScript
+function searchForCells(graph, urlParams) {
+  var cells = [];
+  
+  // Iterate over each property in the `urlParams` object
+  for (var i = 0; i < Object.keys(urlParams).length; i++) {
+    var key = Object.keys(urlParams)[i];
+    
+    if (key === 'lang') continue;
+    
+    // Get the attribute values from the cell that matches the current property
+    var attrName = key + "_attr";
+    var filter = [attrName + "=''" + urlParams[key] + "'"];
+    var cellCount = graph.model.getChildCellCount(graph.root);
+    
+    for (var j = 1; j <= cellCount; j++) {
+      var child = graph.model.getChildAt(graph.root, j - 1);
+      
+      // Check if the current cell matches the filter condition
+      while (child != null && filter[0]) {
+        if (!child.attributes.values[attrName].value === false ||
+            (!Array.isArray(urlParams[key])) &&
+            !child.attributes.values[attrName].getValue().toString() !== urlParams[key].toString())) {
+          break;
+        } else {
+          filter = [attrName + "=" + filter[0]];
+          child = graph.model.getChildAt(child, 0);
+        }
+      }
+      
+      if (filter[0] !== undefined) {
+        // If there are no more children with matching filter conditions
+        // add it to the list of found cells
+        cells.push(child);
+      }
+    }
+  }
+  
+  return cells;
+}	
+```
+
+</details>
     
 ## [Dolly-2](https://huggingface.co/spaces/RamAnanth1/Dolly-v2) (pythia 12B)
 <details>
