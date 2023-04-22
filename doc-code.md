@@ -74,6 +74,56 @@ print(response)
 ```
 	
 </details>	
+<details>
+	<summary><a href="https://open-assistant.io/chat/064439e3-5454-7a96-8000-9b63cae7f07b">Open-Assistant</a> (oasst-sft-6-llama-30b) failed</summary>
+
+To implement semantic search using LlamaIndex on the documents provided by https://gpt-index.readthedocs.io/en/latest/index.html, we can follow these steps:
+
+Step 1: Install dependencies - Make sure you have installed all the required packages for building LlamaIndex and running semantic queries. You may need to install them manually if they are not already present in your environment variables. Follow the instructions mentioned in the dependencies section here: http://www.llamaindex.com/static/docs/guides/installation.html
+Step 2: Download Data - Go to the link mentioned above and download the available dataset that suits your requirements or purpose. Let's assume we will use the sample dataset called "gpt35b" from this collection as it contains around half a million diverse examples. Extract and save it to disk.
+**Note: **The gpt35B dataset is freely accessible but requires registration for access. Please go to https://openai.com/research/projects/gpt/, click on 'Open Dataset', register yourself & confirm email for account activation before downloading the datasets under 'Data'.
+
+Step 3: Initialize Index and Directory Reader - Write a Python script which initializes the Index instance and a directory reader for loading data into memory. Here's some example code for that:
+
+```python
+import os
+import json
+from pathlib import Path
+from typing import List, Dict
+from llama_index import (
+    GPTSimpleVectorIndex,
+    PretrainedModelType,
+    SimpleDirectoryReader,
+)
+
+def load_and_save_dataset(model_type):
+    model_path = f"./{f'{PretrainedModelType.LLAMA}'}/{model_type}.json"
+
+    def read_model():
+        with open(os.devnull, "w") as devnull:
+            exec(compile(open(model_path).read(), model_path, "exec"))
+
+    try:
+        os.remove(model_path)
+    except FileNotFoundError:
+        pass
+    else:
+        print(f"Deleted previous {model_type} model file.")
+    
+    read_model()
+    print(f"Loaded {model_type} model.")
+
+    return model_type
+
+class DatasetteLoader:
+    def __init__(self, name: str, root_dir: Path, file_ext: str = ".txt", pretrained: bool = True, output_file: Optional[str] = None):
+        self.name = name
+        self.root_dir = root_dir
+        self.file_ext = file_ext
+        self.pretrained = pretai
+```
+
+</details>
 
 ## With more documentation
 
