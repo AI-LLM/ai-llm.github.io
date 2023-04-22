@@ -312,6 +312,52 @@ function main(lang)
 (can be continued...)
 ```
 
+Try again:
+						 
+```JavaScript
+// The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the "lang" key.
+var graph = new mxGraph(document.getElementById('container'));
+
+var lang = 'de';
+var urlParams = new URLSearchParams(window.location.search);
+lang = urlParams.get('lang');
+
+if (lang == 'de') {
+    graph.setHtmlLabels(true);
+    graph.setCellsResizable(true);
+    graph.setCellsEditable(false);
+    graph.setPanning(true);
+    graph.setCellsDeletable(false);
+    graph.setCellsReplicate(false, 2);
+    graph.setCellsResizable(false);
+    graph.setCellsDeletable(false);
+    graph.setCellsReplicate(false, 2);
+    graph.setCellsEditable(false);
+    graph.setCellsResizable(false);
+    graph.setCellsDeletable(false);
+    graph.setCellsReplicate(false, 2);
+    graph.setCellsEditable(false);
+    graph.setCellsResizable(false);
+    graph.setCellsDeletable(false);
+    graph.setCellsReplicate(false, 2);
+    graph.setCellsEditable(false);
+    graph.setCellsResizable(false);
+    graph.setCellsDeletable(false);
+    graph.setCellsReplicate(false, 2);
+    graph.setCellsEditable(false);
+    graph.setCellsResizable(false);
+```
+Generate alternative, got:
+						 
+```JavaScript
+    graph.setCellsResizable(false);
+```
+```JavaScript
+    ayer static static static static static static static static static static static static static static static static static static static static static static static static static static static static static static
+```
+```JavaScript
+     Bus Bus Bus () Bus Bus Bus () Bus Bus Bus () Bus Bus Bus () Bus Bus Bus Bus Bus () Bus Bus Bus Bus (_ => () Bus Bus
+```
 </details>
 
 ## [Open-Assistant](https://open-assistant.io/) (oasst-sft-6-llama-30b)
