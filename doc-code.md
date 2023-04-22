@@ -40,6 +40,41 @@ According to above LlamaIndex documentation，write a python program with LlamaI
 
 Both [GPT-3.5](//ai-llm.github.io/doc-code/doc-code-llamaindex-3-5.html) and [GPT-4](//ai-llm.github.io/doc-code/doc-code-llamaindex-4.html) learn.
 
+<details>
+	<summary><a href="https://codegeex.cn/zh-CN/playground">CodeGeex</a> (13B) failed</summary>
+
+```python
+
+#Build and Query Index
+#Create a new .py file with the following:
+#from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
+#
+#documents = SimpleDirectoryReader('data').load_data()
+#index = GPTSimpleVectorIndex.from_documents(documents)
+#
+#This builds an index over the documents in the data folder (which in this case just consists of the essay text). We then run the following:
+#response = index.query("What did the author do growing up?")
+#print(response)
+#
+#You should get back a response similar to the following: The author wrote short stories and tried to program on an IBM 1401.
+#===
+#
+#According to above LlamaIndex documentation，write a python program with LlamaIndex interface to implement semantic search on the documents at https://gpt-index.readthedocs.io/en/latest/index.html
+#
+
+from llama_index import GPTSimpleVectorIndex, SimpleDirectoryReader
+
+documents = SimpleDirectoryReader('data').load_data()
+index = GPTSimpleVectorIndex.from_documents(documents)
+
+response = index.query("What did the author do on growing up?")
+print(response)
+# 代码生成完毕，修改此注释后可继续生成。
+
+```
+	
+</details>	
+
 ## With more documentation
 
 <details>
