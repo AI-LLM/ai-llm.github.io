@@ -680,13 +680,39 @@ def test_add_space():
 </details>
 
 <details>
-<summary>prompting in higher level of abstraction: :green_circle: it has the specific knowledge (mxGraph) and conduct "match" well</summary>
+<summary>prompting in higher level of abstraction: :yellow_circle: it has part of the specific knowledge (mxGraph) and conduct "match" well</summary>
 
 PROMPT:
 
 The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
 
-[ANSWER](higher-level-of-abstraction-gpt-3-5.html)
+ANSWER:
+```JavaScript
+function findCellsByAttributes(graph, urlParams) {
+  var matchingCells = [];
+
+  graph.getModel().walk(function(cell) {//<-- no walk method indeed
+    if (cell.isVertex() || cell.isEdge()) {
+      var cellAttributes = cell.getValue().attributes;
+
+      var attributesMatch = true;
+      for (var key in urlParams) {
+        if (key !== "lang" && cellAttributes[key] !== urlParams[key]) {
+          attributesMatch = false;
+          break;
+        }
+      }
+
+      if (attributesMatch) {
+        matchingCells.push(cell);
+      }
+    }
+  });
+
+  return matchingCells;
+}
+```	
+[...](higher-level-of-abstraction-gpt-3-5.html)
 </details>
 
 
@@ -761,7 +787,41 @@ PROMPT:
 
 The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
 
-[ANSWER](higher-level-of-abstraction-gpt-4.html)
+ANSWER:
+```JavaScript	
+function findMatchingCells(graph, urlParams) {
+  const matchingCells = [];
+  const model = graph.getModel();
+  const filterKeys = Object.keys(urlParams).filter(key => key !== 'lang');
+
+  model.beginUpdate();
+  try {
+    for (let id in model.cells) {
+      const cell = model.cells[id];
+      let isMatch = true;
+
+      for (const key of filterKeys) {
+        const cellAttr = cell.getAttribute(key);
+
+        if (cellAttr === null || cellAttr !== urlParams[key]) {
+          isMatch = false;
+          break;
+        }
+      }
+
+      if (isMatch) {
+        matchingCells.push(cell);
+      }
+    }
+  } finally {
+    model.endUpdate();
+  }
+
+  return matchingCells;
+}
+```
+	
+[...](higher-level-of-abstraction-gpt-4.html)
 </details>
     
 # :motorway: [All Roads Lead To Code in the age of AI](https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-Generation.md)
