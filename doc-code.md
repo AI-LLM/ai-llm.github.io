@@ -80,6 +80,7 @@ print(response)
 To implement semantic search using LlamaIndex on the documents provided by https://gpt-index.readthedocs.io/en/latest/index.html, we can follow these steps:
 
 Step 1: Install dependencies - Make sure you have installed all the required packages for building LlamaIndex and running semantic queries. You may need to install them manually if they are not already present in your environment variables. Follow the instructions mentioned in the dependencies section here: http://www.llamaindex.com/static/docs/guides/installation.html
+
 Step 2: Download Data - Go to the link mentioned above and download the available dataset that suits your requirements or purpose. Let's assume we will use the sample dataset called "gpt35b" from this collection as it contains around half a million diverse examples. Extract and save it to disk.
 **Note: **The gpt35B dataset is freely accessible but requires registration for access. Please go to https://openai.com/research/projects/gpt/, click on 'Open Dataset', register yourself & confirm email for account activation before downloading the datasets under 'Data'.
 
