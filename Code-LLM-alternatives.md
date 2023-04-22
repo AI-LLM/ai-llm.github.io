@@ -633,6 +633,17 @@ def test_add_space():
     
 </details>
 
+<details>
+<summary>prompting in higher level of abstraction: :green_circle: it has the specific knowledge (mxGraph) and conduct "match" well</summary>
+
+PROMPT:
+
+The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
+
+[ANSWER](higher-level-of-abstraction-gpt-3-5.html)
+</details>
+
+
 ## GPT-4
 <details>
 <summary>code generation: :yellow_circle:</summary>
@@ -696,6 +707,15 @@ def test_add_space_between_chars(input_string, expected_output):
 
 [...](gpt-4-python-1,2.html)
     
+</details>
+<details>
+<summary>prompting in higher level of abstraction: :green_circle: it has the specific knowledge (mxGraph) and conduct "match" well</summary>
+
+PROMPT:
+
+The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
+
+[ANSWER](higher-level-of-abstraction-gpt-4.html)
 </details>
     
 # :motorway: [All Roads Lead To Code in the age of AI](https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-Generation.md)
