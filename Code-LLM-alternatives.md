@@ -517,6 +517,33 @@ def test_add_space():
 ```    
     
 </details>
+<details>
+<summary>prompting in higher level of abstraction: :green_circle: it has the specific knowledge (mxGraph) and conduct "match" well</summary>
+
+Generation begins with "//GPT-4" , so it's powered by GPT-4 in this case.
+	
+```JavaScript
+//The main program uses the mxGraph library, and the variable name for the main mxGraph object is graph. Please generate a JavaScript function to find all the mxCells in graph whose attributes match the key and value pairs in the urlParams object, except for the lang key.
+//GPT-4>我对代码进行了一些改进，使其更符合您的要求。以下是您的代码：
+function findCells(graph, urlParams) {
+  const cells = graph.getChildVertices(graph.getDefaultParent());
+  const result = [];
+  for (let i = 0; i < cells.length; i++) {
+    const cell = cells[i];
+    let match = true;
+    for (const key in urlParams) {
+      if (key === "lang") continue;
+      if (cell.getAttribute(key) !== urlParams[key]) {
+        match = false;
+        break;
+      }
+    }
+    if (match) result.push(cell);
+  }
+  return result;
+}
+```	
+</details>
 
 ## Claude
 <details>
