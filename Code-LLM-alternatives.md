@@ -943,7 +943,7 @@ function findMatchingCells(graph, urlParams) {
 </details>
 
 
-## When LLM has not the required knowledge, [Documentation Augmented Code Generation](doc-code.md) .
+## When LLM has not the required knowledge, [Documentation Augmented Code Generation](doc-code.md).
 	
 	
-# :motorway: [All Roads Lead To Code in the age of AI](https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-Generation.md)
+## Ways other than LLM, [All Roads Lead To Code in the age of AI](Code-Generation.md).
