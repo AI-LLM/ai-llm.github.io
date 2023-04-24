@@ -1,5 +1,6 @@
 # All Roads Lead To Code in the age of AI
-    
+条条大路通代码
+
 ```mermaid
 graph TD;
     S((Requirement))-->Q1{"More complex than a \nfunction/method body\n to generate?"};
