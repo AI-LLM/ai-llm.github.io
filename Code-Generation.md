@@ -32,16 +32,16 @@ graph TD;
 
 The way of expressing the **Requirement** is needed to be studied with the level of abstraction varying from user story and use case to docstring and comments.
 
-Metrics is also needed to measure the benefits of using LLM for code generation, like *length of prompt to length of generated code*, etc.
+**Metrics** are also needed to measure the benefits of using LLM for code generation, like *length of prompt to length of generated code*, etc.
 
 代码生成领域的需求痛点：
 1. 实用化的评测缺失
-   1. 需求以何种方式表达？从user story, use case到函数签名和注释，抽象程度差异很大。
-   2. 基于应用目标的评价指标，比如评价 *程序员编码的效率* 可计算 *生成代码长度与prompt键入长度的比值*，等等。
-3. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
+   1. **需求**以何种方式表达？从user story, use case到函数签名和注释，抽象程度差异很大。
+   2. 基于应用目标的**评价指标**，比如评价 *程序员编码的效率* 可计算 *生成代码长度与prompt键入长度的比值*，等等。
+2. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
    1. Anonymize
    2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
-4. 训练coding小模型的难点
+3. 训练coding小模型的难点
    1. 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法?
       1. 用chatgpt生成
       2. 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
