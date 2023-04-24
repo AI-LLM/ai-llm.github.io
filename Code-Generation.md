@@ -40,6 +40,6 @@ Metrics is also needed to measure the benefits of using LLM for code generation,
 3. 训练coding小模型的难点
   - 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法，用chatgpt生成？
   - 13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
-    - Fine tune 13B：高质量专有数据集，能达到什么效果？
+    - Fine tune 13B with 高质量专有数据集，能达到什么效果？
     - 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上Requirement表达方式的问题有关：希望用什么prompt方式？追求的目标是什么（Metrics）？
     - <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
