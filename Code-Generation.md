@@ -1,5 +1,4 @@
-# All Roads Lead To Code in the age of AI
-条条大路通代码
+# All Roads Lead To Code in the age of AI 条条大路通代码
 
 ```mermaid
 graph TD;
