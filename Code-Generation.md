@@ -36,7 +36,9 @@ Metrics is also needed to measure the benefits of using LLM for code generation,
 
 代码生成领域的需求痛点：
 1. 实用化的评测缺失
-2. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法没？
+2. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
+  - Anonymize
+  - [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
 3. 训练coding小模型的难点
   - 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法?
     - 用chatgpt生成
