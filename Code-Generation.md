@@ -30,5 +30,6 @@ graph TD;
     P23 --> Code
 ```
 
-The way of expression of the requirement is also needed to be studied with the level of abstraction varying form user story and use case to docstring and comments.
-It also demands to establish metrics to measure the benefits and goals of using LLM for code generation, like length of prompt to length of generated code, etc.
+The way of expression of the **Requirement** is also needed to be studied with the level of abstraction varying form user story and use case to docstring and comments.
+
+It's also needed to establish metrics to measure the benefits of using LLM for code generation, like *length of prompt to length of generated code*, etc.
