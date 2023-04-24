@@ -15,8 +15,8 @@ graph TD;
     Q2 -- Yes -->P1
     Q2 -- No -->P2;
     P1 --> Q3{"Special \nAPI/Library/Framework used?"};
-    Q3 -- No -->P10[Prompt engineering];
-    Q3 -- Yes -->P11["Retrieval (embedding) + \nPrompt engineering"];
+    Q3 -- No -->P10["<a href='/prompt-patterns/'>Prompt engineering</a>"];
+    Q3 -- Yes -->P11["Retrieval (embedding) + \n<a href='/prompt-patterns/'>Prompt engineering</a>"];
     P2 --> Q4{On-premise required?};
     Q4 -- Yes --> Q5{To be deterministic?};
     Q4 -- No --> P23["GitHub Copilot, \nAWS CodeWhisperer alike"]
