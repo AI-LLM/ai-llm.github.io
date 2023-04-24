@@ -2,7 +2,7 @@
     
 ```mermaid
 graph TD;
-    S((Requirement))-->Q1{"More than a simple \nfunction/method to generate?"};
+    S((Requirement))-->Q1{"More complex than a \nfunction/method to generate?"};
     S-->Q2{Code to understand?};
     Q1 -- Yes --> Q1a{"Have a model defined in \nhigher level of abstraction?"}
     Q1a -- No --> P1["GPT-3.5,4\nClaude"];
