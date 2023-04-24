@@ -37,7 +37,7 @@ Metrics is also needed to measure the benefits of using LLM for code generation,
 代码生成领域的需求痛点：
 1. 实用化的评测缺失
    1. 需求以何种方式表达？从user story, use case到函数签名和注释，抽象程度差异很大。
-   2. 基于应用目标的评价指标，比如评价程序员编码的效率可计算生成代码长度与prompt键入长度的比值，等等。
+   2. 基于应用目标的评价指标，比如评价 *程序员编码的效率* 可计算 *生成代码长度与prompt键入长度的比值*，等等。
 3. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
    1. Anonymize
    2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
