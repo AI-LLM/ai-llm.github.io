@@ -30,7 +30,7 @@ graph TD;
     P23 --> Code
 ```
 
-The way of expressing the **Requirement** is needed to be studied with the level of abstraction varying form user story and use case to docstring and comments.
+The way of expressing the **Requirement** is needed to be studied with the level of abstraction varying from user story and use case to docstring and comments.
 
 Metrics is also needed to measure the benefits of using LLM for code generation, like *length of prompt to length of generated code*, etc.
 
