@@ -37,13 +37,13 @@ Metrics is also needed to measure the benefits of using LLM for code generation,
 代码生成领域的需求痛点：
 1. 实用化的评测缺失
 2. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
-  - Anonymize
-  - [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
+   1. Anonymize
+   2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
 3. 训练coding小模型的难点
-  - 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法?
-    - 用chatgpt生成
-    - 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
-  - 13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
-    - Fine tune 13B with 高质量专有数据集，能达到什么效果？
-    - 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上Requirement表达方式的问题有关：希望用什么prompt方式？追求的目标是什么（Metrics）？
-    - <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
+   1. 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法?
+      1. 用chatgpt生成
+      2. 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
+   2. 13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
+      1. Fine tune 13B with 高质量专有数据集，能达到什么效果？
+      2. 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上Requirement表达方式的问题有关：希望用什么prompt方式？追求的目标是什么（Metrics）？
+      3. <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
