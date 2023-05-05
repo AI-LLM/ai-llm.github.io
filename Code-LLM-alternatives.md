@@ -24,7 +24,33 @@ def add_space(s):
 print(add_space('Hello World'))
 ```
 </details>
-	
+<details>
+<summary>javascript generation: :red_circle:</summary>
+
+PROMPT:
+```Javascript
+//In a Javascript ‘Tensor’ object, ‘dims’ property has the dimensions of the data, e.g. dims=[1,8,6]. ‘data’ property is an array of float numbers. if dims==[1,8,6], data has 1*8*6=48 elements.
+function argmax(tensor,axis){
+```
+
+RESULT:
+```Javascript
+//In a Javascript ‘Tensor’ object, ‘dims’ property has the dimensions of the data, e.g. dims=[1,8,6]. ‘data’ property is an array of float numbers. if dims==[1,8,6], data has 1*8*6=48 elements.
+function argmax(tensor,axis){
+    var dims = tensor.dims;
+    var data = tensor.data;
+    var size = dims.length;
+    var strides = tensor.strides;
+    var shape = tensor.shape;
+    var strides_size = strides.length;
+    var strides_data = strides.data;
+    var strides_i = 0;
+    var strides_j = 0;
+    var strides_k = 0;
+    var strides_l = 0;
+```	
+</details>
+
 ## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) ([GPT-2](https://huggingface.co/bigcode/santacoder-megatron) 1.1B with [Megatron-LM](https://github.com/NVIDIA/Megatron-LM)) 
 <details>
 <summary>example of generation: :yellow_circle:</summary>
