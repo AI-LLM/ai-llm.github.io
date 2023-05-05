@@ -1,5 +1,30 @@
 # A curated list of awesome LLMs for code generation
 
+## [Replit Code v1.3](https://huggingface.co/spaces/replit/replit-code-v1-3b-demo) (2.7B) 
+<details>
+<summary>example of generation: :red_circle:</summary>
+
+PROMPT:
+```
+# A Python function that adds space between each two characters of the input string:
+
+Number of tokens to generate: 128
+Temperature: 0.2
+Random seed to use for the generation: 0
+```
+
+RESULT:
+```python
+# A Python function that adds space between each two characters of the input string:
+def add_space(s):
+    # Your code here
+    return s.replace(' ', ' ')
+
+# Test your function
+print(add_space('Hello World'))
+```
+</details>
+	
 ## [SantaCoder](https://huggingface.co/spaces/bigcode/santacoder-demo) ([GPT-2](https://huggingface.co/bigcode/santacoder-megatron) 1.1B with [Megatron-LM](https://github.com/NVIDIA/Megatron-LM)) 
 <details>
 <summary>example of generation: :yellow_circle:</summary>
