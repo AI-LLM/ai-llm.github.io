@@ -43,7 +43,7 @@ The way of expressing the **Requirement** is needed to be studied with the level
       </details>    
    2. 基于应用目标的**评价指标**，比如评价 *程序员编码的效率* 可计算 *生成代码长度与prompt键入长度的比值*，等等。
 2. 使用公共大模型的信息泄漏问题，除了改用内部部署小模型外还有什么办法？
-   1. Anonymize
+   1. [Anonymization](https://github.com/AI-LLM/AnonymizedGPT) (WIP)
    2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
 3. 训练coding小模型的难点
    1. 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法?
