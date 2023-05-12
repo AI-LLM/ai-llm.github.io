@@ -53,3 +53,5 @@ The way of expressing the **Requirement** is needed to be studied with the level
       1. Fine tune 13B with 高质量专有数据集，能达到什么效果？
       2. 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上1有关。
       3. <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
+4. 最新的代码、文档不会运用
+5. 高阶技术（训练数据中出现少，或者需要复杂的推理过程才能找到正确的方案）不会运用
