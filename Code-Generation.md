@@ -55,3 +55,16 @@ The way of expressing the **Requirement** is needed to be studied with the level
       3. <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
 4. 最新的代码、文档不会运用
 5. 高阶技术（训练数据中出现少，或者需要复杂的推理过程才能找到正确的方案）不会运用
+```mermaid
+graph LR;
+S((Requirement))-->Pre-processing
+Pre-processing --> LLM
+LLM --> Post-processing
+Post-processing --> Evaluation
+Post-processing --> U(User correction)
+Evaluation --> U
+U --> Transformation-Learning
+Evaluation --> Transformation-Learning
+Transformation-Learning --> Post-processing
+Transformation-Learning --> Pre-processing
+```
