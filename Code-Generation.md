@@ -63,16 +63,20 @@ S -- I/O examples --> LLMsynth[LLM for draft programs]
 doc[(Doc and example)] -- Retrieval --> Pre-processing
 subgraph SYNTHESIZE
 Pre-processing --> LLMsynth
+LLMsynth --> PN[/N Program candidates/]
 end
-LLMsynth --> Post-processing
-Post-processing --> Evaluation
+PN --> Execution
+PN --> Evaluation
 subgraph EVAL
-Evaluation
+Execution
+Evaluation[Human evaluation]
+Execution --> Ranking
+Evaluation --> Ranking
 end
-Post-processing --> U(User correction)
-Evaluation --> U
-U --> Transformation-Learning
-Evaluation --> Transformation-Learning
-Transformation-Learning --> Post-processing
+Ranking --> PS[/W program selected/]
+subgraph DEBUG
+PS --> LLMdebug[LLM for debugging]
+end
+LLMdebug -- update --> PN
 Transformation-Learning --> Pre-processing
 ```
