@@ -60,8 +60,10 @@ The way of expressing the **Requirement** is needed to be studied with the level
 graph LR;
 S((Requirement))-->Pre-processing
 doc[(Doc and example)] -- Retrieval --> Pre-processing
-Pre-processing --> LLM
-LLM --> Post-processing
+subgraph SYNTHESIZE
+Pre-processing --> LLMsynth[LLM for draft programs]
+end
+LLMsynth --> Post-processing
 Post-processing --> Evaluation
 Post-processing --> U(User correction)
 Evaluation --> U
