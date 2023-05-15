@@ -57,7 +57,7 @@ The way of expressing the **Requirement** is needed to be studied with the level
 5. 高阶技术（训练数据中出现少，或者需要复杂的推理过程才能找到正确的方案）不会运用
 6. 其他生成代码的缺陷类型和分布与[人类程序员相似](https://arxiv.org/abs/2205.10583)
 ```mermaid
-graph LR;
+graph TD;
 doc[(Doc and example)] -- Retrieval --> Pre-processing
 S((Requirement)) -- task description --> Pre-processing
 S -- I/O examples --> Pre-processing
