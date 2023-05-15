@@ -59,6 +59,7 @@ The way of expressing the **Requirement** is needed to be studied with the level
 ```mermaid
 graph LR;
 S((Requirement))-->Pre-processing
+doc[(Doc and example)] -- Retrieval --> Pre-processing
 Pre-processing --> LLM
 LLM --> Post-processing
 Post-processing --> Evaluation
