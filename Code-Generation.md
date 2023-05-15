@@ -75,7 +75,7 @@ Ranking --> PS[/W program selected/]
 subgraph DEBUG
 PS --> Instruct
 Execution -- stderr --> Instruct
-Instruct --> LLMdebug[LLM for debugging]
+Instruct -- prompt --> LLMdebug[LLM for debugging]
 PS --> Correction[Human correction]
 end
 S -- I/O examples --> Instruct
