@@ -66,17 +66,17 @@ Pre-processing --> LLMsynth
 LLMsynth --> PN[/N Program candidates/]
 end
 PN --> Execution
-PN --> Evaluation
+PN --> Evaluation[Human evaluation]
 subgraph EVAL
-Execution
-Evaluation[Human evaluation]
 Execution --> Ranking
 Evaluation --> Ranking
 end
 Ranking --> PS[/W program selected/]
 subgraph DEBUG
 PS --> LLMdebug[LLM for debugging]
+PS --> Correction[Human correction]
 end
 LLMdebug -- update --> PN
-Transformation-Learning --> Pre-processing
+Correction --> Transformation-Learning
+Transformation-Learning --> PN
 ```
