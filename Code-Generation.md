@@ -59,10 +59,10 @@ The way of expressing the **Requirement** is needed to be studied with the level
 ```mermaid
 graph LR;
 S((Requirement)) -- task description --> Pre-processing
-S -- I/O examples --> LLMsynth[LLM for draft programs]
+S -- I/O examples --> Pre-processing
 doc[(Doc and example)] -- Retrieval --> Pre-processing
 subgraph SYNTHESIZE
-Pre-processing --> LLMsynth
+Pre-processing -- prompt --> LLMsynth[LLM for draft programs]
 LLMsynth --> PN[/N Program candidates/]
 end
 PN --> Execution
@@ -73,9 +73,12 @@ Evaluation --> Ranking
 end
 Ranking --> PS[/W program selected/]
 subgraph DEBUG
-PS --> LLMdebug[LLM for debugging]
+PS --> Instruct
+Execution -- stderr --> Instruct
+Instruct --> LLMdebug[LLM for debugging]
 PS --> Correction[Human correction]
 end
+S -- I/O examples --> Instruct
 LLMdebug -- update --> PN
 Correction --> Transformation-Learning
 Transformation-Learning --> PN
