@@ -65,6 +65,9 @@ Pre-processing --> LLMsynth[LLM for draft programs]
 end
 LLMsynth --> Post-processing
 Post-processing --> Evaluation
+subgraph EVAL
+Evaluation
+end
 Post-processing --> U(User correction)
 Evaluation --> U
 U --> Transformation-Learning
