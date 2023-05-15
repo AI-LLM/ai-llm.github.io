@@ -58,10 +58,11 @@ The way of expressing the **Requirement** is needed to be studied with the level
 6. 其他生成代码的缺陷类型和分布与[人类程序员相似](https://arxiv.org/abs/2205.10583)
 ```mermaid
 graph LR;
-S((Requirement))-->Pre-processing
+S((Requirement)) -- task description --> Pre-processing
+S -- I/O examples --> LLMsynth[LLM for draft programs]
 doc[(Doc and example)] -- Retrieval --> Pre-processing
 subgraph SYNTHESIZE
-Pre-processing --> LLMsynth[LLM for draft programs]
+Pre-processing --> LLMsynth
 end
 LLMsynth --> Post-processing
 Post-processing --> Evaluation
