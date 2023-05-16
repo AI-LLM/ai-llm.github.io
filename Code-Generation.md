@@ -77,7 +77,7 @@ class End INV;
 Ranking --> PS[/W program selected/]
 subgraph DEBUG
 Execution -- stderr --> noerr{empty stderr?}
-noerr -- No --> PT1["Prompt template:Fix{stderr}"] 
+noerr -- No --> PT1["Prompt template:\nFix{stderr}"] 
 PT1 -- prompt --> LLMdebug
 subgraph INSTRUCT
 PT2["Prompt template:\n{task} {program} make {I} -> {O}, ..."]
