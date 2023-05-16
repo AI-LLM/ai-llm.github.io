@@ -79,13 +79,21 @@ subgraph DEBUG
 Execution -- stderr --> noerr{empty stderr?}
 noerr -- No --> PT1["Prompt template:Fix{stderr}"] 
 PT1 -- prompt --> LLMdebug
-noerr -- Yes --> PT2["Prompt template:\n{task} {program} make {I} -> {O}, ..."]
-Pre-processing -- task description --> PT2
-PS --> PT2
-PT2 -- prompt --> LLMdebug[[LLM for debugging]]
-PS --> Correction[Human correction]
+subgraph INSTRUCT
+PT2["Prompt template:\n{task} {program} make {I} -> {O}, ..."]
+LLMsum[[LLM for bug summary]]
 end
 Execution -- return and expected I/O --> PT2
+Execution -- return and expected I/O --> LLMsum
+noerr -- Yes --> PT2
+Pre-processing -- task description --> PT2
+Pre-processing -- task description --> LLMsum
+PS --> PT2
+PS --> LLMsum
+PT2 -- prompt --> LLMdebug[[LLM for debugging]]
+LLMsum -- prompt --> LLMdebug
+PS --> Correction[Human correction]
+end
 LLMdebug -- update --> PN
 Correction --> Transformation-Learning
 Transformation-Learning --> PN
