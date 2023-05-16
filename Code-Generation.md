@@ -56,6 +56,9 @@ The way of expressing the **Requirement** is needed to be studied with the level
 4. 最新的代码、文档不会运用
 5. 高阶技术（训练数据中出现少，或者需要复杂的推理过程才能找到正确的方案）不会运用
 6. 其他生成代码的缺陷类型和分布与[人类程序员相似](https://arxiv.org/abs/2205.10583)
+
+为解决以上三点，可以设计如下多次迭代的闭环提示工程：
+
 ```mermaid
 graph TD;
 classDef INV fill:black,color:white;
