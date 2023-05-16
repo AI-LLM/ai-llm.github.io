@@ -62,22 +62,26 @@ The way of expressing the **Requirement** is needed to be studied with the level
 ```mermaid
 graph TD;
 classDef INV fill:black,color:white;
-doc[(Doc and example)] -- Retrieval --> Pre-processing
 S((Requirement)) -- task description --> Pre-processing
 S -- I/O examples --> Pre-processing
+doc[(Doc and example)] -- Retrieval --> Pre-processing
+
 subgraph SYNTHESIZE
 Pre-processing -- prompt --> LLMsynth[[LLM for draft programs]]
 LLMsynth --> PN[/N Program candidates/]
 end
+
 PN --> Execution
 PN --> Evaluation[Human evaluation]
+
 subgraph EVAL
 Execution --> Suc{Pass?} -- No -->Ranking
 Evaluation --> Suc
 end
-Suc -- Yes --> End
-class End INV;
+
+Suc -- Yes --> End((End));class End INV
 Ranking --> PS[/W program selected/]
+
 subgraph DEBUG
 Execution -- stderr --> noerr{empty stderr?}
 noerr -- No --> PT1["Prompt template:\nFix{stderr}"] 
@@ -96,8 +100,9 @@ PS --> LLMsum
 PT2 -- prompt --> LLMdebug[[LLM for debugging]]
 LLMsum -- prompt --> LLMdebug
 PS --> Correction[Human correction]
-end
 LLMdebug -- update --> PN
+end
+
 Correction --> LLMcorrect[[LLM for correction learning]]
 LLMcorrect --> PN
 ```
