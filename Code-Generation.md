@@ -76,8 +76,10 @@ Suc -- Yes --> End
 class End INV;
 Ranking --> PS[/W program selected/]
 subgraph DEBUG
+Execution -- stderr --> err{empty stderr?}
+err -- No --> PT1["Prompt template:Fix{stderr}"] 
+PT1 -- prompt --> LLMdebug
 PS --> Instruct
-Execution -- stderr --> Instruct
 Instruct -- prompt --> LLMdebug[[LLM for debugging]]
 PS --> Correction[Human correction]
 end
