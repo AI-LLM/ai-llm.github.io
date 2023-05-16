@@ -66,8 +66,8 @@ subgraph SYNTHESIZE
 Pre-processing -- prompt --> LLMsynth[[LLM for draft programs]]
 LLMsynth --> PN[/N Program candidates/]
 end
-PN --> Execution[Human evaluation]
-PN --> Evaluation
+PN --> Execution
+PN --> Evaluation[Human evaluation]
 subgraph EVAL
 Execution --> Suc{Pass?} -- No -->Ranking
 Evaluation --> Suc
