@@ -76,14 +76,15 @@ Suc -- Yes --> End
 class End INV;
 Ranking --> PS[/W program selected/]
 subgraph DEBUG
-Execution -- stderr --> err{empty stderr?}
-err -- No --> PT1["Prompt template:Fix{stderr}"] 
+Execution -- stderr --> noerr{empty stderr?}
+noerr -- No --> PT1["Prompt template:Fix{stderr}"] 
 PT1 -- prompt --> LLMdebug
-PS --> Instruct
-Instruct -- prompt --> LLMdebug[[LLM for debugging]]
+noerr -- Yes --> PT2["Prompt template:\nmake {I} -> {O}, ..."]
+PS --> PT2
+PT2 -- prompt --> LLMdebug[[LLM for debugging]]
 PS --> Correction[Human correction]
 end
-Execution -- return and expected I/O --> Instruct
+Execution -- return and expected I/O --> PT2
 LLMdebug -- update --> PN
 Correction --> Transformation-Learning
 Transformation-Learning --> PN
