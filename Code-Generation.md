@@ -62,7 +62,7 @@ doc[(Doc and example)] -- Retrieval --> Pre-processing
 S((Requirement)) -- task description --> Pre-processing
 S -- I/O examples --> Pre-processing
 subgraph SYNTHESIZE
-Pre-processing -- prompt --> LLMsynth[LLM for draft programs]
+Pre-processing -- prompt --> LLMsynth[[LLM for draft programs]]
 LLMsynth --> PN[/N Program candidates/]
 end
 PN --> Evaluation[Human evaluation]
@@ -75,7 +75,7 @@ Ranking --> PS[/W program selected/]
 subgraph DEBUG
 PS --> Instruct
 Execution -- stderr --> Instruct
-Instruct -- prompt --> LLMdebug[LLM for debugging]
+Instruct -- prompt --> LLMdebug[[LLM for debugging]]
 PS --> Correction[Human correction]
 end
 S -- I/O examples --> Instruct
