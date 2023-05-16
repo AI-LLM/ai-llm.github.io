@@ -95,6 +95,6 @@ LLMsum -- prompt --> LLMdebug
 PS --> Correction[Human correction]
 end
 LLMdebug -- update --> PN
-Correction --> Transformation-Learning
-Transformation-Learning --> PN
+Correction --> LLMcorrect[[LLM for correction learning]]
+LLMcorrect --> PN
 ```
