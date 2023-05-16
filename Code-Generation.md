@@ -79,7 +79,8 @@ subgraph DEBUG
 Execution -- stderr --> noerr{empty stderr?}
 noerr -- No --> PT1["Prompt template:Fix{stderr}"] 
 PT1 -- prompt --> LLMdebug
-noerr -- Yes --> PT2["Prompt template:\nmake {I} -> {O}, ..."]
+noerr -- Yes --> PT2["Prompt template:\n{task} {program} make {I} -> {O}, ..."]
+Pre-processing -- task description --> PT2
 PS --> PT2
 PT2 -- prompt --> LLMdebug[[LLM for debugging]]
 PS --> Correction[Human correction]
