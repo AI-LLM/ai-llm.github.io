@@ -65,6 +65,7 @@ classDef INV fill:black,color:white;
 S((Requirement)) -- task description --> Pre-processing
 S -- I/O examples --> Pre-processing
 doc[(Doc and example)] -- Retrieval --> Pre-processing
+LLMcodet[["LLM for <a href='https://arxiv.org/pdf/2207.10397v2.pdf'>CodeT</a>"]] -- generated tests --> Pre-processing
 
 subgraph SYNTHESIZE
 Pre-processing -- prompt --> LLMsynth[[LLM for draft programs]]
