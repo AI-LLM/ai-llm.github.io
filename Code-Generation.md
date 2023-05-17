@@ -53,8 +53,8 @@ The way of expressing the **Requirement** is needed to be studied with the level
       1. Fine tune 13B with 高质量专有数据集，能达到什么效果？
       2. 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上1有关。
       3. <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
-   3. 超越chatgpt的路径？
-      1. [HumanEval中失败的典型是NL对复杂任务的描述或理解问题](https://dl.acm.org/doi/abs/10.1145/3558489.3559072)，所以小模型难以超越更大的模型。[Copilot也难以提高编程工作的成功率，更多是减少程序员简单任务所花时间](https://dl.acm.org/doi/abs/10.1145/3491101.3519665)。所以训练更高抽象度的NL表达？tokenizer能否兼顾代码元素命名的语义和唯一性标识？
+   3. 超越chatgpt的路径？[HumanEval中失败的典型是NL对复杂任务的描述或理解问题](https://dl.acm.org/doi/abs/10.1145/3558489.3559072)，所以小模型难以超越更大的模型。[Copilot也难以提高编程工作的成功率，更多是减少程序员简单任务所花时间](https://dl.acm.org/doi/abs/10.1145/3491101.3519665)。
+      1. 所以训练更高抽象度的NL表达，让prompting耗时更少？tokenizer能否兼顾代码元素命名的语义和唯一性标识？
 4. 最新的代码、文档不会运用
 5. 高阶技术（训练数据中出现少，或者需要复杂的推理过程才能找到正确的方案）不会运用
 6. 其他生成代码的缺陷类型和分布与[人类程序员相似](https://arxiv.org/abs/2205.10583)
