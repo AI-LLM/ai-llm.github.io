@@ -47,7 +47,7 @@ The way of expressing the **Requirement** is needed to be studied with the level
    2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
 3. 训练coding小模型的难点
    1. 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法？而且github中的数据质量并不非常高，比如程序员自己编写的注释可能[过于简单和抽象](https://arxiv.org/abs/2302.00288)。
-      1. 用[Codex](https://dl.acm.org/doi/abs/10.1145/3501385.3543957)、[GPT-Neo等模型生成](https://arxiv.org/abs/2207.14502)
+      1. 用[GPT](https://github.com/sahil280114/codealpaca)、[Codex](https://dl.acm.org/doi/abs/10.1145/3501385.3543957)、[GPT-Neo等模型生成](https://arxiv.org/abs/2207.14502)
       2. 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
    2. 13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
       1. Fine tune 13B with 高质量专有数据集，能达到什么效果？
