@@ -21,7 +21,7 @@ graph TD;
     Q4 -- Yes --> Q5{To be deterministic?};
     Q4 -- No --> P23["GitHub Copilot, \nAWS CodeWhisperer alike"]
     Q5 -- Yes --> P21["Templates and rule based generator \ngenerated with GPT-4, MTBE, etc."]
-    Q5 -- No --> P22["Fine-tune <a href='https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-LLM-alternatives.md'>LMs < 100B</a>"]
+    Q5 -- No --> P22["Fine-tune <a href='https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-LLM-alternatives.md'>LMs < 20B</a>"]
     P10 --> Code{{Code}}
     P11 --> Code
     P12 --> Code
