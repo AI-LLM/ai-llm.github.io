@@ -61,9 +61,7 @@ The way of expressing the **Requirement** is needed to be studied with the level
       3. Using GPT-4 or human experts to correct generated erroneous code and then fine-tuning the models.
 
    3. Path to surpassing ChatGPT? [Typical failures in HumanEval are related to the difficulties of describing or understanding complex tasks with NL](https://dl.acm.org/doi/abs/10.1145/3558489.3559072), which makes it challenging for small models to surpass larger models. [Copilot also struggles to improve the success rate of programming tasks, focusing more on reducing the time spent on simple tasks by programmers](https://dl.acm.org/doi/abs/10.1145/3491101.3519665).
-      1. Therefore, training NL expressions with higher levels of abstraction to minimize prompting
-
- time. Can the tokenizer balance semantic representation and unique identification of code elements?
+      1. Therefore, training NL expressions with higher levels of abstraction to minimize prompting time. Can the tokenizer balance semantic representation and unique identification of code elements?
 
 4. Inability to leverage the latest code and documentation.
 
