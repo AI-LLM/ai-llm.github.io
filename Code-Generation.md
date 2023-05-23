@@ -46,13 +46,14 @@ The way of expressing the **Requirement** is needed to be studied with the level
    1. [Anonymization](https://github.com/AI-LLM/AnonymizedGPT) (WIP)
    2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
 3. 训练coding小模型的难点
-   1. 除了1，似乎数据已经耗尽了也是个大问题，github用完了还有什么办法？而且github中的数据质量并不非常高，比如程序员自己编写的注释可能[过于简单和抽象](https://arxiv.org/abs/2302.00288)。
-      1. 用[GPT](https://github.com/sahil280114/codealpaca)、[Codex](https://dl.acm.org/doi/abs/10.1145/3501385.3543957)、[GPT-Neo等模型生成](https://arxiv.org/abs/2207.14502)
-      2. 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
-   2. 13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
+   1. 除了1，似乎数据已经耗尽了也是个大问题，13B的CodeGen和CodeGeex基本耗尽了Java、C++等热门编程语言数据，但是[跟ChatGPT还是有不小的差距](Code-LLM-alternatives.md)，那么
       1. Fine tune 13B with 高质量专有数据集，能达到什么效果？
       2. 增加world knowledge训练13B或以上模型，成本对多数企业不现实。而且于以上1有关。
       3. <13B的模型，但只训练一种编程语言，能接近chatgpt吗？
+   2. github以外还有什么数据？而且github中的数据质量并不非常高，比如程序员自己编写的注释可能[过于简单和抽象](https://arxiv.org/abs/2302.00288)。
+      1. 用[GPT](https://github.com/sahil280114/codealpaca)、[Codex](https://dl.acm.org/doi/abs/10.1145/3501385.3543957)、[GPT-Neo等模型生成](https://arxiv.org/abs/2207.14502)
+      2. 基于规则的合成，参考[法律NER的经验](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f)和[医疗领域经验](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a)。
+      3. 对生成错误代码的任务用GPT-4或人类专家纠正后fine tune   
    3. 超越chatgpt的路径？[HumanEval中失败的典型是NL对复杂任务的描述或理解问题](https://dl.acm.org/doi/abs/10.1145/3558489.3559072)，所以小模型难以超越更大的模型。[Copilot也难以提高编程工作的成功率，更多是减少程序员简单任务所花时间](https://dl.acm.org/doi/abs/10.1145/3491101.3519665)。
       1. 所以训练更高抽象度的NL表达，让prompting耗时更少？tokenizer能否兼顾代码元素命名的语义和唯一性标识？
 4. 最新的代码、文档不会运用
