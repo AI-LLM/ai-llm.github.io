@@ -34,6 +34,45 @@ The way of expressing the **Requirement** is needed to be studied with the level
 
 **Metrics** are also needed to measure the benefits of using LLM for code generation, like *length of prompt to length of generated code*, etc.
 
+## Requirements and Pain Points in Code Generation Domain:
+
+1. Lack of practical evaluation metrics
+   1. **How should requirements be expressed?** There is a wide range of differences in expressing requirements, from user stories and use cases to function signatures and comments.
+      <details>
+        <summary>Ideas</summary>
+        
+        The core idea of using Language Model (LM) to improve the level of abstraction can be: let the LM complete the missing details. Based on the contextual knowledge it possesses, it can ask the user about the missing information. This can minimize cognitive burden and improve human productivity. How can we avoid the LM's *hallucinations*? We can use semantic search to find corresponding design patterns or template code for the LM to refer to and discover what specific details are needed. Does the user's current prompt and context provide the necessary information? If not, it can ask the user for clarification.
+      </details>
+   2. Evaluation metrics based on application goals, such as evaluating *programmer coding efficiency* by calculating the ratio of generated code length to prompt input length, and so on.
+
+2. Information leakage when using public large models. Besides using internally deployed small models, are there any other solutions?
+   1. [Anonymization](https://github.com/AI-LLM/AnonymizedGPT) (Work in Progress)
+   2. [Use of dummies](https://privacypatterns.org/patterns/Use-of-dummies)
+
+3. Challenges in training coding models
+   1. Apart from the issues mentioned in 1, data depletion seems to be a major problem. The 13B CodeGen and CodeGeex models have almost exhausted the data for popular programming languages like Java and C++. However, there is still a significant gap compared to ChatGPT. In this regard:
+      1. Can fine-tuning the 13B model with high-quality proprietary datasets yield significant improvements?
+      2. Increasing world knowledge to train a 13B or larger model is cost-prohibitive for most companies. Moreover, it is related to the issue mentioned in 1.
+      3. Can models smaller than 13B, but trained for a single programming language, approach the capabilities of ChatGPT?
+
+   2. What other data sources are available besides GitHub? The quality of data on GitHub is not always high, for example, programmers' own comments may be too [simplistic and abstract](https://arxiv.org/abs/2302.00288).
+      1. Using models like [GPT](https://github.com/sahil280114/codealpaca), [Codex](https://dl.acm.org/doi/abs/10.1145/3501385.3543957), [GPT-Neo](https://arxiv.org/abs/2207.14502) to generate code.
+      2. Rule-based synthesis, drawing inspiration from experiences in [legal NER anonymization](https://towardsdatascience.com/why-we-switched-from-spacy-to-flair-to-anonymize-french-legal-cases-e7588566825f) and [medical domain knowledge incorporation](https://xamat.medium.com/data-as-prior-innate-knowledge-for-deep-learning-models-23898363a71a).
+      3. Using GPT-4 or human experts to correct generated erroneous code and then fine-tuning the models.
+
+   3. Path to surpassing ChatGPT? [Typical failures in HumanEval are related to the difficulties of describing or understanding complex tasks with NL](https://dl.acm.org/doi/abs/10.1145/3558489.3559072), which makes it challenging for small models to surpass larger models. [Copilot also struggles to improve the success rate of programming tasks, focusing more on reducing the time spent on simple tasks by programmers](https://dl.acm.org/doi/abs/10.1145/3491101.3519665).
+      1. Therefore, training NL expressions with higher levels of abstraction to minimize prompting
+
+ time. Can the tokenizer balance semantic representation and unique identification of code elements?
+
+4. Inability to leverage the latest code and documentation.
+
+5. Inability to utilize advanced techniques that are either underrepresented in training data or require complex reasoning processes.
+
+6. Other code generation defects exhibit similar characteristics and distribution to [those of human programmers](https://arxiv.org/abs/2205.10583).
+
+To address the above points, the following iterative closed-loop prompting engineering can be designed (after the Chinese text):
+
 代码生成领域的需求痛点：
 1. 实用化的评测缺失
    1. **需求**以何种方式表达？从user story, use case到函数签名和注释，抽象程度差异很大。
