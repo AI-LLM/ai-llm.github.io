@@ -1,0 +1,645 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Helvetica;
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:DengXian;
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"Helvetica Neue";
+	panose-1:2 0 5 3 0 0 0 2 0 4;}
+@font-face
+	{font-family:"PingFang SC";
+	panose-1:2 11 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Apple Color Emoji";
+	panose-1:0 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\@等线";
+	panose-1:2 1 6 0 3 1 1 1 1 1;}
+@font-face
+	{font-family:"\@PingFang SC";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:DengXian;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin:0cm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:21.0pt;
+	font-size:10.5pt;
+	font-family:DengXian;}
+.MsoChpDefault
+	{font-family:DengXian;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 37.55pt 72.0pt 33.25pt;
+	layout-grid:15.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=ZH-CN style='word-wrap:break-word;text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:15.6pt'>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>1.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>写一个<span lang=EN-US>python</span>程序找出<span lang=EN-US>2020</span>之后的<span
+lang=EN-US>20</span>个闰年</p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>写一个<span lang=EN-US>python</span>程序检查<span lang=EN-US>2020</span>之后的年份直到找到<span
+lang=EN-US>20</span>个闰年</p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>3.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>a python program to find 20 leap years after
+2020</span></p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>a python program to check the years after 2020
+until 20 leap years are found</span></p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>A Python function that adds space between each
+two characters of the input string</span></p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>A Python function that adds space between each 2
+characters of the input string</span></p>
+
+<p class=MsoListParagraph style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US>7.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>A Python function that adds space between each n
+characters of the input string</span></p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=640
+ style='margin-left:-5.9pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>Prompts</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>code llama
+  13B</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>code llama
+  34B Q6</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>code llama
+  34B Q8</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>code llama
+  34B</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>Ziya 34B</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>WizardCoder-15B-V1.0</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>Bard</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>Claude</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>GPT-3.5</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border:solid #9A9A9A 1.0pt;
+  border-left:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Helvetica Neue"'>GPT-4</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>1</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Cambria Math",serif;
+  background:yellow'>⍻</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>2</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>3</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>4</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>&nbsp;</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>5</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>&nbsp;</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>6</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>&nbsp;</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=54 valign=top style='width:40.85pt;border:solid #9A9A9A 1.0pt;
+  border-top:none;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:Helvetica'>7</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.65pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>&nbsp;</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  style='font-size:7.5pt;font-family:"Apple Color Emoji"'>❌</span></p>
+  </td>
+  <td width=66 valign=top style='width:49.6pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=76 valign=top style='width:2.0cm;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.4pt;border-top:none;border-left:none;
+  border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=57 valign=top style='width:42.55pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+  <td width=47 valign=top style='width:35.45pt;border-top:none;border-left:
+  none;border-bottom:solid #9A9A9A 1.0pt;border-right:solid #9A9A9A 1.0pt;
+  padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=left style='text-align:left;text-autospace:none'><span
+  lang=EN-US style='font-size:7.5pt;font-family:"Apple Color Emoji"'>✅</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
