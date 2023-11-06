@@ -8,7 +8,7 @@ Andrej Karpathy在2017年就阐述了这个[Software 2.0](https://karpathy.mediu
 后来发生一个大的变化我现在都知道了，就是GPT不再是用神经网络来解决NLP、视觉识别等图灵机模型效率低的单个或多个问题，而是用一个超大的模型和数据集直接[逼近AGI](https://www.youtube.com/watch?v=Ft0gTO2K85A)（或者我认为是逼近人类的知识学习和运用过程）。
 
 此时Andrej Karpathy把LLM看作[新的操作系统(Operating System)的核心进程(kernel process)，一种新的计算范式(computing paradigm)](https://twitter.com/karpathy/status/1707437820045062561)。是否“神经网络”已经可以更具体到LLM就解决全部问题？
-神经网络的难题是需要大量的训练数据和高昂的训练成本，LLM“涌现”出的ICL等Prompting能力能像高级语言替代汇编和机器语言一样成为新计算范式的主要“编程”方式吗？类比“图灵完备”，Prompting会是“神经网络完备”的吗？
+神经网络的难题是需要大量的训练数据和高昂的训练成本，LLM“涌现”出的ICL等Prompting能力能像高级语言替代汇编和机器语言一样替代训练（反向传播和梯度下降）成为新计算范式的主要“编程”方式吗？类比“图灵完备”，Prompting会是“神经网络完备”的吗？
 
 ②对于已有的软件遗产和适合冯诺依曼计算机处理的功能，神经网络可以学习使用。所以前者如何更好的提供接口，两者如何更好的交互，会是一个重要课题。
 
