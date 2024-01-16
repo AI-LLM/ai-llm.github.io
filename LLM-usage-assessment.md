@@ -10,7 +10,7 @@
         * Semantic-based cache
         * Synchronous testing of other models, comparison with GPT-4
     3. Manual judgment (1-3)
-        * Compared to the ability gap of target users
+        * Capabilities that the target users lack, or the extent of the gap
 2. Writing prompts
     1. Auto-generation (3)
     2. Difficulty in manual writing (1)
@@ -40,7 +40,7 @@
         * 基于语义的cache
         * 同步测试其他模型，与GPT-4对比
     3. 人工判断（1-3）
-        * 相较目标用户的能力差距
+        * 目标用户不具备的能力，或差距的大小
 2. 撰写提示词
     1. 自动生成（3）
     2. 人工撰写之难易（1）
