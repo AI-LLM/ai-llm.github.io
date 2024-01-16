@@ -26,7 +26,7 @@
     3. Manual judgment (1-3)
         * Intuitiveness of the results
 
-![](LLM usage assessments.png)
+![](LLM-usage-assessments.png)
 
 (In Chinese)
 
