@@ -10,3 +10,6 @@
 
 ## 🛣️ [All Roads Lead To Code in the age of AI](https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-Generation.md)
 条条大路通代码
+
+## ⚖️ [LLM Usage Assessment](https://github.com/AI-LLM/ai-llm.github.io/blob/main/LLM-usage-assessment.md)
+LLM用法（产品）评估方法
