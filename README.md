@@ -1,3 +1,8 @@
+## 💡 [Fin-X](https://ai-llm.github.io/fin-x/)
+A Neural machine translation (NMT) experiment to translate news (from Twitter/X) from Finnish to Chinese with LLMs ([Facebook NLLB](https://ai.meta.com/research/no-language-left-behind/)) on CUDA and Apple Silicon devices.
+
+The content copyright belongs to the original author. If there are any objections, or to obtain more detailed performance data, please contact me.
+
 ## 💡 [Prompt Patterns](https://ai-llm.github.io/prompt-patterns/)
 提示模式
 
