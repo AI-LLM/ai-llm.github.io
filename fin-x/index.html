@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+
+    <title>Finland News Translations</title>
+
+    <link rel="stylesheet" href="assets/css/article-lists/article-list-thumbnails.css">
+
+    <script>
+        function padNumber(num) {
+            return num.toString().padStart(2, '0');
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            var ul = document.querySelector('.article-list-thumbnails');
+            var today = new Date();
+
+            for (var i = 0; i < 14; i++) {
+                var date = new Date();
+                date.setDate(today.getDate() - i);
+
+                var weekday = date.getDay();
+                var day = date.getDate();
+                var month = date.getMonth() + 1;
+                var year = date.getFullYear();
+
+                var li = document.createElement('li');
+                li.style.backgroundImage = "url('assets/images/pictures/weekdays/" + weekday + ".jpeg')";
+
+                var h2 = document.createElement('h2');
+                var a = document.createElement('a');
+                a.href = year + '-' + padNumber(month) + '-' + padNumber(day) + '.html';
+                a.textContent = year + '-' + month + '-' + day;
+
+                h2.appendChild(a);
+                li.appendChild(h2);
+                ul.appendChild(li);
+            }
+        });
+    </script>
+
+</head>
+<body>
+
+    <ul class="article-list-thumbnails">
+        <!-- JavaScript will populate this list -->
+    </ul>
+
+</body>
+
+</html>
