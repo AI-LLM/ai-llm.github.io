@@ -10,6 +10,7 @@ The content copyright belongs to the original author. If there are any objection
 
 ## 🚦 [A curated list of awesome LLMs for code generation](https://github.com/AI-LLM/ai-llm.github.io/blob/main/Code-LLM-alternatives.md) 
 ## 🚦 [a mini evaluation on code models](mini-code-evaluation.html)
+## 🚦 [More failures of GPT-4](https://github.com/AI-LLM/ai-llm.github.io/blob/main/GPT-4-failure.md) 
 模型代码能力测试
 
 ## 📚 [Documentation Augmented Code Generation](https://github.com/AI-LLM/ai-llm.github.io/blob/main/doc-code.md)
