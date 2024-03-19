@@ -1,3 +1,6 @@
+## ✍️AI Code Assistant Internals 深入解析LLM代码辅助工具
+[Part I](https://medium.com/@GenerationAI/ai-code-assistant-internals-a0792de699dc), [II](https://medium.com/@GenerationAI/ai-code-assistant-internals-ii-648e6b630b6c) and [III](https://medium.com/@GenerationAI/ai-code-assistant-internals-iii-fb6b99016bf7).
+
 ## 💡 [Fin-X](https://ai-llm.github.io/fin-x/)
 A Neural machine translation (NMT) experiment to translate news ([crawling](https://github.com/luweigen/selenium-crawler) from Twitter/X) from Finnish to Chinese and English with LLMs ([Facebook NLLB](https://ai.meta.com/research/no-language-left-behind/)) on CUDA and Apple Silicon devices.
 
